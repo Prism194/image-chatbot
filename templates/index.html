@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Concept Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Enter a Product Concept</h1>
+    <form id="conceptForm" method="POST" action="/generate">
+      <input type="text" id="concept" name="concept" placeholder="Enter product concept" required>
+      <input type="text" id="funtionality" name="funtionality" placeholder="Enter product functionality" required>
+      <input type="text" id="vibe" name="vibe" placeholder="Enter product vibe" required>
+      <input type="text" id="features" name="features" placeholder="Enter product features(optional)"><br>
+      <select name="creativity" id="creativity" required>
+        <option value="unimaginative">unimaginative</option>
+        <option value="normal">normal</option>
+        <option value="imaginative">imaginative</option>
+      </select><br>
+      <button type="submit">Generate</button>
+    </form>
+  </div>
+</body>
+</html>
