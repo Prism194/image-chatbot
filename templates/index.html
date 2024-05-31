@@ -20,7 +20,16 @@
         <option value="imaginative">imaginative</option>
       </select><br>
       <button type="submit">Generate</button>
+      <div id="loading-indicator" style="margin-bottom: 2px; text-align: right; margin-right:12.5%; display: none">
+        <p>Loading...</p>
+      </div>
     </form>
   </div>
+  <script>
+    document.getElementById('conceptForm').addEventListener('submit', function(event) {
+      // Show the loading indicator
+      document.getElementById('loading-indicator').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
